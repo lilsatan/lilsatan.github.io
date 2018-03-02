@@ -1,0 +1,263 @@
+<HTML><TITLE>Boarding</TITLE>
+ <meta name="apple-mobile-web-app-capable" content="yes"\ />
+ <meta name="viewport" content="width=360, minimal-ui, user-scalable=no" />
+<link rel="icon" 
+      type="image/png" 
+      href="boarding.png">
+<link rel="apple-touch-icon-precomposed" sizes="40x40" href="app_icon.png" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
+<SCRIPT>
+	function myfunction(e) { 
+   	e.preventDefault();
+    document.getElementById('boarding_header').innerHTML = document.getElementById("ef_boarding_header").value;
+    document.getElementById('gate_header').innerHTML = document.getElementById("ef_gate").value;
+    document.getElementById('from').innerHTML = document.getElementById("ef_from").value;
+    document.getElementById('to').innerHTML = document.getElementById("ef_to").value;
+    document.getElementById('from_code').innerHTML = document.getElementById("ef_from_code").value;
+    document.getElementById('to_code').innerHTML = document.getElementById("ef_to_code").value;
+    document.getElementById('date').innerHTML = document.getElementById("ef_date").value;
+    document.getElementById('flight').innerHTML = document.getElementById("ef_flight").value;
+    document.getElementById('gate').innerHTML = document.getElementById("ef_gate").value;
+    document.getElementById('zone').innerHTML = document.getElementById("ef_zone").value;
+    document.getElementById('seat').innerHTML = document.getElementById("ef_seat").value;
+    document.getElementById('flyer').innerHTML = document.getElementById("ef_flyer").value;
+    document.getElementById('entryForm').style.display = "none";
+    document.getElementById('hotspot1').style.display = "block";
+ } 
+</SCRIPT>
+<STYLE>
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+	
+html, body, #page {
+    height:100%;
+    width: 360px;
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-image: url("westjet2.jpg");
+    background-repeat: no-repeat;
+    background-size: 360px 640px;
+    background-position: 0 -40; 
+}
+div.entryForm {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    padding: 0px;
+    color: white;
+    background-color: silver;
+    z-index: 2;
+}
+
+input {
+  font-size: 11px;
+  padding: 5px;
+margin-bottom: 4px;
+}
+
+div.boarding_pass {
+    position: absolute;
+    left: 0px;
+    top: -20px;
+    width: 360;
+    height: 640;
+    color: white;
+    font-family: Work Sans, Open Sans,Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+div.pass_image {
+    position: absolute;
+}
+
+div.boarding_header {
+    position: absolute;
+    left: 190px;
+    top: 68px;
+    width:100px;
+    height:25px;
+    font-size: 21px;
+    text-align: right;
+    
+}
+
+div.gate_header {
+    position: absolute;
+    left: 243px;
+    top: 68px;
+    width:100px;
+    height:25px;
+    font-size: 21px;
+    text-align: right;
+    
+}
+
+div.from {
+    position: absolute;
+    left: 15px;
+    top: 120px;
+    width:180px;
+    height:25px;
+    font-size: 14px;
+    text-align: left;
+    
+}
+
+div.to {
+    position: absolute;
+    left: 165px;
+    top: 120px;
+    width:180px;
+    height:25px;
+    font-size: 14px;
+    text-align: right;
+
+}
+
+div.from_code {
+    position: absolute;
+    left: 15px;
+    top: 130px;
+    width:180px;
+    height:25px;
+    font-size: 40px;
+    text-align: left;
+    
+}
+
+div.to_code {
+    position: absolute;
+    left: 165px;
+    top: 130px;
+    width:180px;
+    height:25px;
+    font-size: 40px;
+    text-align: right;
+    
+}
+
+div.date {
+    position: absolute;
+    left: 16px;
+    top: 215px;
+    width:100px;
+    height:25px;
+    font-size: 19px;
+    text-align: left;
+    
+}
+
+div.flight {
+    position: absolute;
+    left: 120px;
+    top: 215px;
+    width:100px;
+    height:25px;
+    font-size: 19px;
+    text-align: left;
+    
+}
+
+div.gate {
+    position: absolute;
+    left: 210px;
+    top: 215px;
+    width:100px;
+    height:25px;
+    font-size: 19px;
+    text-align: left;
+    
+}
+
+div.zone {
+    position: absolute;
+    left: 265px;
+    top: 215px;
+    width:100px;
+    height:25px;
+    font-size: 19px;
+    text-align: left;
+    
+}
+
+div.seat {
+    position: absolute;
+    left: 165px;
+    top: 215px;
+    width:180px;
+    height:25px;
+    font-size: 19px;
+    text-align: right;
+}
+
+div.flyer {
+    position: absolute;
+    left: 16px;
+    top: 275px;
+    width:200px;
+    height:25px;
+    font-size: 19px;
+    text-align: left;
+    
+}
+
+div.hotspot1 {
+    position: absolute;
+    left: 10px;
+    top: 505px;
+    width:40px;
+    height:40px;
+    z-index: 2;
+    display: none;
+}
+	
+
+.round-button {
+    display:block;
+    width:40px;
+    height:40px;
+    line-height:50px;
+    border-radius: 50%;
+    color:#f5f5f5;
+    text-align:center;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+
+}
+
+</STYLE><BODY><DIV id="boarding_pass" CLASS="boarding_pass"><div id="entryForm" class="entryForm"><form><CENTER>
+<BR><BR><BR><input type="text" name="ef_boarding_header" id="ef_boarding_header" VALUE="7:50PM"><BR>
+<input type="text" name="ef_from" id="ef_from" VALUE="SASKATOON, SK"><BR>
+<input type="text" name="ef_to" id="ef_to" VALUE="CALGARY, AB"><BR>
+<input type="text" name="ef_from_code" id="ef_from_code" VALUE="YXE"><BR>
+<input type="text" name="ef_to_code" id="ef_to_code" VALUE="YYC"><BR>
+<input type="text" name="ef_date" id="ef_date" VALUE="01.MAR.18"><BR>
+<input type="text" name="ef_flight" id="ef_flight" VALUE="WS3247"><BR>
+<input type="text" name="ef_gate" id="ef_gate" VALUE="6"><BR>
+<input type="text" name="ef_zone" id="ef_zone" VALUE="Z"><BR>
+<input type="text" name="ef_seat" id="ef_seat" VALUE="SBY"><BR>
+<input type="text" name="ef_flyer" id="ef_flyer" VALUE="BRENT EVJEN"><BR><BR>
+<input type="submit" name="ef_button" id="ef_button" onclick="myfunction(event)" />
+</CENTER></form></div>
+	<DIV id="pass_image" class="pass_image"></DIV>
+	<DIV id="boarding_header" class="boarding_header">7:50PM</DIV>
+	<DIV id="gate_header" class="gate_header">6</DIV>
+	<DIV id="from" class="from">SASKATOON, SK</DIV>
+	<DIV id="to" class="to">CALGARY, AB</DIV>
+	<DIV id="from_code" class="from_code">YXE</DIV>
+	<DIV id="to_code" class="to_code">YYC</DIV>
+	<DIV id="date" class="date">01.MAR.18</DIV>
+	<DIV id="flight" class="flight">WS3247</DIV>
+	<DIV id="gate" class="gate">6</DIV>
+	<DIV id="zone" class="zone">Z</DIV>
+	<DIV id="seat" class="seat">SBY</DIV>
+	<DIV id="flyer" class="flyer">BRENT EVJEN</DIV>
+	<DIV id="hotspot1" class="hotspot1"><a href="#" class="round-button" onClick="window.location.reload( true );"> </a></DIV>
+	</DIV></BODY>
+</HTML>
